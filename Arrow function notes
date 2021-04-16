@@ -1,0 +1,37 @@
+# //Traditional function
+function (a){
+  return a+10;
+}
+
+//Arrow function breakdown
+//Remove the word function and place arrow between argument and opening body bracket
+(a) => {
+  return a+10;
+}
+
+//Remove the body brackets and word "return" -- return is implied
+(a) => a+10;
+
+//Remove the argument parantheses
+a => a+10;
+
+//If you have multiple arguments or no arguments , introduce parenthese
+function (a,b){
+  return a+b+10;
+}
+
+(a,b) => { 
+  return a+b+10;
+}
+
+// Traditional Function (no arguments)
+let a = 4;
+let b = 2;
+function (){
+  return a + b + 100;
+}
+
+// Arrow Function (no arguments)
+let a = 4;
+let b = 2;
+() => a + b + 100;
