@@ -1,0 +1,22 @@
+The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+
+Syntax
+`setTimeout(function, milliseconds, param1, param2, ...)`
+
+function : The function that will be executed
+milliseconds	Optional :  The number of milliseconds to wait before executing the code. If omitted, the value 0 is used
+param1, param2, ...	Optional :  Additional parameters to pass to the function (Not supported in IE9 and earlier)
+
+
+function abc(){alert("hello")}
+function myFunc() {
+	let hh = setTimeout(abc, 3000);
+}
+
+let hh = setTimeout( function abc(){alert("hello")} , 3000);
+
+let hh = setTimeout ( abc = () => {
+alert("hello")
+} ,3000);
+
+let hh = setTimeout( () => {alert("hello")} , 3000);
