@@ -1,0 +1,46 @@
+
+Let’s say you have the following object:
+
+        const Zell = {
+          firstName: 'Zell',
+          lastName: 'Liew'
+        }
+        
+To get the firstName and lastName from Zell, you had to create two variables, then assign each variable to a value, like this:
+
+        let firstName = Zell.firstName // Zell
+        let lastName = Zell.lastName // Liew
+        
+With destructuring, you can create and assign these variables with a single line of code. Here’s how you destructure objects:
+
+let { firstName, lastName } = Zell
+
+console.log(firstName) // Zell
+console.log(lastName) // Liew
+See what happened here? By adding curly brackets ({}) while declaring variables, we’re telling JavaScript to create the aforementioned variables, 
+then assign Zell.firstName to firstName and Zell.lastName to lastName respectively.
+
+This is what’s going under the hood:
+
+// What you write
+let { firstName, lastName } = Zell
+
+// ES6 does this automatically
+let firstName = Zell.firstName
+let lastName = Zell.lastName
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+rename variables while destructuring with a colon (:).
+
+In this example below, I’m creating a courseName variable and assigning course.name to it.
+
+let { name: courseName } = course
+
+console.log(courseName) // JS Fundamentals for Frontend Developers
+
+// What ES6 does under the hood:
+let courseName = course.name
+
+--------------------------------------------------------------------------------------------------------------------------------
+
