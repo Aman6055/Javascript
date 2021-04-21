@@ -1,0 +1,11 @@
+Like let, const is also blocked-scoped. The difference is that const cannot be reassigned once declared.
+
+        const name = 'Zell'
+        name = 'Sleepy head' // TypeError: Assignment to constant variable.
+
+        let name1 = 'Zell'
+        name1 = 'Sleepy head'
+        console.log(name1) // 'Sleepy head'
+        
+Since const cannot be reassigned, they’re good for variables would not change.
+
