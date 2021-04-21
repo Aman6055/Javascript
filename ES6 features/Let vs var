@@ -1,0 +1,39 @@
+var is function-scoped. This means whenever a variable is created with var in a function, it will only exist within the function.
+
+        function sayMe() {
+          var me = 'Zell'
+          console.log(me)
+        }
+
+        sayMe() // Zell
+        console.log(me) // Uncaught ReferenceError: me is not defined
+
+
+If the variable is created outside of the function, it’ll exist in the outer scope.
+        var me = 'Zell' // global scope
+
+        function sayMe () {
+          var me = 'Sleepy head' // local scope
+          console.log(me)
+        }
+
+        sayMe() // Sleepy head
+        console.log(me) // Zell
+
+
+let, on the other hand, is block-scoped. This means whenever a variable is created with let, it will only exist within its block.
+A block in JavaScript is anything within a pair of curly braces. 
+The difference between block-scope and function-scoped variables are huge. When you use a function-scoped variable, you may accidentally overwrite a 
+variable without intending to do so. Here’s an example:
+
+        var me = 'Zell'
+
+        if (true) {
+          var me = 'Sleepy head'
+        }
+
+console.log(me) // 'Sleepy head'
+In this example, you can see that me becomes Sleepy head after running through the if block. 
+This example will likely not cause any problems for you since you probably won’t be declaring variables with the same name.
+
+
