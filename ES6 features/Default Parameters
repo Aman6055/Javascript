@@ -1,0 +1,15 @@
+In ES6, with default parameters, we can add an equal sign (=) whenever we define a parameter. 
+If we do so, ES6 automatically defaults to that value when the parameter is undefined.
+
+So, in this code below, when teamName is undefined, it defaults to unaffiliated:
+
+        const announcePlayer = (firstName, lastName, teamName = 'unaffiliated') => {
+          console.log(firstName + ' ' + lastName + ', ' + teamName)
+        }
+
+        announcePlayer('Zell', 'Liew')
+        // Zell Liew, unaffiliated
+
+        announcePlayer('Stephen', 'Curry', 'Golden State Warriors')
+        // Stephen Curry, Golden State Warriors
+
